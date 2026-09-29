@@ -2,6 +2,7 @@ let mes = document.querySelector("#mes");
 let dia = document.querySelector("#dia");
 let meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
 
+mes.innerHTML += `<option disabled selected class="text-black">Escolha o mês</option>`;
 for(let m = 0; m < meses.length; m++){
     mes.innerHTML += `<option class="text-black">${meses[m]}</option>`;
 }
@@ -16,7 +17,11 @@ function descobrirNome(){
         nome = "Pedrinho"
     } else if(mes.value == "Fev"){
         nome = "Betão"
-    } // Completar os meses
+    } else if(mes.value == "Mar"){
+        nome = "Paulinho"
+    } else if(mes.value == "Abr"){
+        nome = "Léozinho"
+    }
 
     if(dia.value == 1){
         nome += " Treina Bumbum"
